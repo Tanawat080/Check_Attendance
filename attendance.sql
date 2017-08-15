@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 15, 2017 at 10:32 AM
+-- Generation Time: Aug 15, 2017 at 10:48 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -769,7 +769,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`userID`, `user`, `password`, `typeUser`) VALUES
 (30001, 'admin', 'admin1234', 'ผู้ดูแลระบบ'),
-(30002, 'gapom', 'Ga.pom1539', 'อาจารย์');
+(30002, 'gapom', 'Ga.pom1539', 'อาจารย์'),
+(30003, 'ceo', 'ceo1234', 'ผู้บริหาร');
 
 --
 -- Indexes for dumped tables
@@ -856,7 +857,7 @@ ALTER TABLE `typecheckinout`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30003;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30004;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

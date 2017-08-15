@@ -20,18 +20,18 @@ session_start();
                       //$_SESSION["User"] = $row["Firstname"]." ".$row["Lastname"];
                       $_SESSION["typeUser"] = $row["typeUser"];
 
-                      if($_SESSION["typeUser"]=="ผู้ดูแลระบบ"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
+                      if($_SESSION["typeUser"]=="ผู้ดูแลระบบ"){ //ถ้าเป็น admin ให้กระโดดไปหน้า adminpage.php
 
                         Header("Location: adminpage.php");
 
                       }
 
-                      if ($_SESSION["typeUser"]=="อาจารย์"){  //ถ้าเป็น อาจารย์ ให้กระโดดไปหน้า user_page.php
+                      if ($_SESSION["typeUser"]=="อาจารย์"){  //ถ้าเป็น อาจารย์ ให้กระโดดไปหน้า teacherpage.php
 
                         Header("Location: teacherpage.php");
 
                       }
-                      if ($_SESSION["typeUser"]=="ผู้บริหาร"){  //ถ้าเป็น ผู้อำนวยการ ให้กระโดดไปหน้า user_page.php
+                      if ($_SESSION["typeUser"]=="ผู้บริหาร"){  //ถ้าเป็น ผู้บริหาร ให้กระโดดไปหน้า ceopage.php
 
                         Header("Location: ceopage.php");
 
