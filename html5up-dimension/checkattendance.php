@@ -11,8 +11,7 @@ if (!$_SESSION["uname"]){  //check session
 		<title>KSP CHECKING</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	</head>
 	<style>
 	div.abcd{
@@ -32,20 +31,58 @@ if (!$_SESSION["uname"]){  //check session
 <div class="abcd">
 	<body background="/images/bg.jpg">
 <!-- ล็อคเอ้าท์ -->
-    <div align="right" class="a" >
-      <table border="1">
+    <div align="right" class="a" ><br>
+      <table border="1" bordercolor="#000000" cellpadding="5">
+				<tr>
       		<td>
-    		  <center> ลงชื่อเข้าใช้โดยรหัส :
+    		  <center><font color='#003366'> ลงชื่อเข้าใช้โดยรหัส :
     			<?php echo($_SESSION['userID']);?><br>
-          ประเภทผู้ใช้งาน : <?php echo($_SESSION['typeUser']);?>
+          ประเภทผู้ใช้งาน : <?php echo($_SESSION['typeUser']);?> </font>
     			<?php //session_destroy();?>
-    			<a href="logout.php">ออกจากระบบ</a></center>
-        </td>
+    			<a href="logout.php"><font color="#CC0000">ออกจากระบบ</font></a></center>
+        </tr></td>
         </table>
+				<hr>
+
     </div> <!-- จบล็อคเอ้าท์ -->
-<br><br>
+
 <div align="right">
-	<a href="addsubject.php">+ เพิ่มรายวิชา</a>
+	<a href="teacherpage.php"><button type="button" class="btn btn-primary"><font color="#000000">หน้าหลัก</font></button></a>	&nbsp;
+	<a href="addsubject.php"><button type="button" class="btn btn-danger"><font color="#000000">เพิ่มรายวิชา</font></button></a> &nbsp;&nbsp;
+</div>
+<br>
+<center><h3><font color='#003366'>รายวิชาที่สอน</font></h3></center>
+<div class="table-responsive">
+<table class="table" width="800" border="1" align="center" bordercolor="#666666" >
+	<tr>
+		<td width="100" align="center" bgcolor="#CCCCCC"><strong><font color='#003366'>รหัสวิชา</font></strong></td>
+		<td width="200"align="center" bgcolor="#CCCCCC"><strong><font color='#003366'>วิชา (ห้อง)</font></strong></td>
+		<td width="100" align="center" bgcolor="#CCCCCC"><strong><font color='#003366'>เช็คชื่อ</font></strong></td>
+		<td width="100" align="center" bgcolor="#CCCCCC"><strong><font color='#003366'>แก้ไข</font></strong></td>
+		<td width="100" align="center" bgcolor="#CCCCCC"><strong><font color='#003366'>ลบ</font></strong></td>
+		<td width="200" align="center" bgcolor="#CCCCCC"><strong><font color='#003366'>อัพเดทล่าสุด</font></strong></td>
+</tr>
+<?php
+//connect db
+include ("connectDB.php");
+$strSQL = mysqli_query($mysqli,"select * from teacher where userID='".$_SESSION['userID']."'");
+$objResult = mysqli_fetch_array($strSQL);
+
+$strSLQ2 = "select * from subject where teacherID='".$objResult['teacherID']."'";
+$result = mysqli_query($mysqli, $strSLQ2);  //เรียกข้อมูลมาแสดงทั้งหมด
+while($row = mysqli_fetch_array($result))
+{
+echo "<tr class='active'>";
+echo "<td align='center'><font color='#003366'>" . $row["subjectID"] . "</font></td>";
+echo "<td align='center'><font color='#003366'>" . $row["subject"] ."&nbsp" .$row['class']. "</font></td>";
+echo "<td align='center'><a href='checkattendance_check.php?subjectID=$row[subjectID]&class=$row[class]'><font color='#009900'>คลิก</font></a></td>";
+echo "<td align='center'><a href='subject_edit.php?subjectID=$row[subjectID]&class=$row[class]'><font color='#FF3300'>คลิก</font></a></td>";
+echo "<td align='center'><a href='subject_delete.php?subjectID=$row[subjectID]&class=$row[class]'><font color='#CC0000'>คลิก</font></a></td>";
+echo "<td align='center'><font color='#CC0000'>" . $row["update"] . "</font></td>";
+echo "</tr>";
+}
+?>
+</table>
 </div>
 	</body>
 

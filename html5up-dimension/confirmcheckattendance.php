@@ -26,7 +26,7 @@ date_default_timezone_set("Asia/Bangkok");
 			$strSQL .="'".date("Y-m-d")."' ";
 			$strSQL .=",'".date("G:i:s")."','".$_POST["note"]."','".$objResult['teacherID']."') ";
 			$objQuery = mysqli_query($mysqli,$strSQL);
-			echo $strSQL;
+			//echo $strSQL;
 		}
 	}
 

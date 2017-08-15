@@ -84,7 +84,7 @@ while($row = mysqli_fetch_array($result))
 echo "<td align='center'>" .$row['studentID']. "</td>"; ?>
 <input class="form-control"  type="hidden" name="studentID_<?php echo $i; ?>" value="<?php echo $row['studentID']; ?>">
 <?php
-echo "<td align='center'>" .$row['studentName']."&nbsp&nbsp".$row['studentLastname']. "</td>";
+echo "<td align='left'>" .$row['studentName']."&nbsp&nbsp".$row['studentLastname']. "</td>";
 echo "<td align='center'>" .$row['class']. "</td>";
 echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' value='10001'></td>";
 echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' value='10002'></td>";
@@ -97,7 +97,7 @@ $i=$i+1;
 
 ?>
 
-</table></div><br>
+</table><br>
 <input class="form-control"  type="hidden" name="hdLine" value="<?php echo $i-1; ?>">
 <div class="container"align="center">
   <label >หมายเหตุ:</label>

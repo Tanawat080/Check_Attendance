@@ -9,7 +9,6 @@
 <body>
 <?php
 date_default_timezone_set("Asia/Bangkok");
-
 		//*** Update Record ***//
 		include ("connectDB.php");
 
@@ -18,7 +17,6 @@ date_default_timezone_set("Asia/Bangkok");
 		$objQuery = mysqli_query($mysqli,$strSQL);
 		echo $strSQL;
  		Header("Location: checkattendance.php");?>
-
 
 </body>
 </html>

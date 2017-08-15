@@ -58,7 +58,8 @@ if (!$_SESSION["uname"]){  //check session
 
 		?>
 		<center><h2>ผลการเช็คชื่อ ประจำวันที่ <?php echo date("Y-m-d"); ?></h2></center>
-		<table width="800" border="1" align="center" bordercolor="#666666">
+		<div class="table-responsive">
+		<table class="table" width="800" border="1" align="center" bordercolor="#666666">
 			<tr>
 				<td width="50" align="center" bgcolor="#CCCCCC"><strong>ลำดับ</strong></td>
 				<td width="100"align="center" bgcolor="#CCCCCC"><strong>รหัสนักเรียน</strong></td>
@@ -92,7 +93,7 @@ if (!$_SESSION["uname"]){  //check session
 
 		while($row = mysqli_fetch_array($result))
 		{
-			echo "<tr>";
+			echo "<tr class='active'>";
 			echo "<td align='center'>" .$i. "</td>";
 		echo "<td align='center'>" .$row['studentID']. "</td>"; ?>
 		<input class="form-control"  type="hidden" name="studentID_<?php echo $i; ?>" value="<?php echo $row['studentID']; ?>">
@@ -106,7 +107,7 @@ if (!$_SESSION["uname"]){  //check session
 
 		?>
 
-	</table><br><center>
+	</table></div><br><center>
 		<a href="teacherpage.php"><button type="button" class="btn btn-success"><font color="#000000">เสร็จสิ้น</font></button></a>	&nbsp;
 		<a ><button type="button" onclick="javascript:window.print()" class="btn btn-warning"><font color="#000000">พิมพ์</font></button></a>	&nbsp;
 </center>

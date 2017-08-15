@@ -40,7 +40,7 @@ if (!$_SESSION["uname"]){  //check session
     			<?php echo($_SESSION['userID']);?><br>
           ประเภทผู้ใช้งาน : <?php echo($_SESSION['typeUser']);?>
     			<?php //session_destroy();?>
-    			<a href="logout.php">ออกจากระบบ</a></center>
+    			<a href="logout.php"><font color="#CC0000">ออกจากระบบ</font></a></center>
         </td>
         </table>
     </div> <!-- จบล็อคเอ้าท์ -->
@@ -48,9 +48,9 @@ if (!$_SESSION["uname"]){  //check session
 <form method="post" action="confirmSubject.php">
 			<div class="col-xs-4">
         <label for="ex3">รหัสวิชา</label>
-        <input class="form-control"  type="text">
+        <input class="form-control"  type="text" name="subjectID">
 				<label for="ex3">วิชา</label>
-				<input class="form-control"  type="text">
+				<input class="form-control"  type="text" name="subject">
 				<label for="ex3">ห้องเรียน</label>
 				<select class="form-control" name="class" style="width: 200px">
 					<option value="">เลือกห้องเรียน</option>
@@ -60,7 +60,7 @@ if (!$_SESSION["uname"]){  //check session
 							//$objResult = mysqli_fetch_array($strSQL);
 									while($objResult = mysqli_fetch_array($strSQL)){
 						?>
-					<option value="<?php echo $objResult["classID"];?>"><?php echo "ม.".$objResult["class"];?></option>
+					<option value="<?php echo $objResult["class"];?>"><?php echo "ม.".$objResult["class"];?></option>
 			 <?php
 			 }
 			 ?>
@@ -69,7 +69,6 @@ if (!$_SESSION["uname"]){  //check session
 
 			</div>
 </form>
-
 
 	</body>
 

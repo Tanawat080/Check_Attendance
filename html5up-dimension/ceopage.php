@@ -20,20 +20,13 @@ if (!$_SESSION["uname"]){  //check session
 
 	}div.abcd img{
 		border-radius:5px;
-	}div.abcd h1,h2,h3,h4,h5{
-		display: block;
-		font-weight: 600;
-		letter-spacing: 0.2rem;
-		line-height: 1.5;
-		margin: 0 0 1rem 0;
-		text-transform: uppercase;
 	}
 	</style>
 <div class="abcd">
-	<body background="images/bg.jpg">
+	<body background="/images/bg.jpg">
 <!-- ล็อคเอ้าท์ -->
     <div align="right" class="a" >
-      <table border="1" style="background-color:#E6E6FA" >
+      <table border="1">
       		<td>
     		  <center> ลงชื่อเข้าใช้โดยรหัส :
     			<?php echo($_SESSION['userID']);?><br>
@@ -45,20 +38,26 @@ if (!$_SESSION["uname"]){  //check session
     </div> <!-- จบล็อคเอ้าท์ -->
 <br><br>
 	<center>
-		<!-- <img src="images/ksp1.png"> -->
-		<h1> KSP Checking </h1>
-		<h2>ผู้บริหาร</h2>
-		<hr><br>
+		<h2 style="
+		display: block;
+		font-weight: 600;
+		letter-spacing: 0.2rem;
+		line-height: 1.5;
+		margin: 0 0 1rem 0;
+		text-transform: uppercase;">KSP Checking </h2>
 		<div class="im">
-	<a href="checkattendance.php" ><img src="images/image001.png" width="200" height="75"  ></a>	&nbsp;&nbsp;&nbsp;
-	<a href="#"><img src="images/image002.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
-	<a href="#"><img src="images/image003.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
-	<a href="#"><img src="images/image004.png" width="200" height="75" ></a>	<br><br><br>
-	<a href="#"><img src="images/image005.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
-	<a href="#"><img src="images/image006.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
-	<a href="#"><img src="images/image007.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
-	<a href="#"><img src="images/image008.png" width="200" height="75" ></a>	<br><br><br>
-
+	<a href="#" ><img src="images/pic01.jpg" width="200" height="75"  ></a>	&nbsp;&nbsp;&nbsp;
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	&nbsp;&nbsp;&nbsp;
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	&nbsp;&nbsp;&nbsp;
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	<br><br>
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	&nbsp;&nbsp;&nbsp;
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	&nbsp;&nbsp;&nbsp;
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	&nbsp;&nbsp;&nbsp;
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	<br><br>
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	&nbsp;&nbsp;&nbsp;
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	&nbsp;&nbsp;&nbsp;
+	<a href="#"><img src="#" width="200" height="75" border='1'></a>	&nbsp;&nbsp;&nbsp;
+	<a href="google.com"><img src="#" width="200" height="75" border='1'></a>
 </div>
 </div>
 	</body>
