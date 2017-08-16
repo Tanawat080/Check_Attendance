@@ -57,9 +57,6 @@ if (!$_SESSION["uname"]){  //check session
 	<h3>ผู้ดูแลระบบ</h3>
 	<hr><br>
 	<div align="right">
-		<a href="addstudents_form.php"><button type="button" class="btn btn-danger"><font color="#000000">จัดการข้อมูลนักเรียน</font></button></a> &nbsp;&nbsp;
-
-		<a href="teacherInfo.php"><button type="button" class="btn btn-danger"><font color="#000000">จัดการข้อมูลอาจารย์</font></button></a> &nbsp;&nbsp;
 	</div>
 		<div class="im">
 			<a href="#"><img src="images/image001.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
@@ -74,7 +71,9 @@ if (!$_SESSION["uname"]){  //check session
 			<a href="#"><img src="images/image012.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
 			<a href="#"><img src="images/image013.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
 			<a href="#"><img src="images/image014.png" width="200" height="75" ></a>	<br><br><br>
-			<a href="adduser.php"><img src="images/image015.png" width="200" height="75" ></a>
+			<a href="adduser.php"><img src="images/image015.png" width="200" height="75" ></a> &nbsp;&nbsp;&nbsp;
+			<a href="addstudents_form.php"><img src="images/image016.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
+			<a href="teacherInfo.php"><img src="images/image017.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
 </div>
 </div>
 	</body>

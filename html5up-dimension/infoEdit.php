@@ -69,8 +69,8 @@ $objResult = mysqli_fetch_array($strSQL);
  <input class="form-control" style="width: 400px" type="text" value="<?php echo $objResult['teacherLastname'] ?>" name="teacherLastname"><br>
  <label for="ex3">เบอร์โทรศัพท์</label>
  <input class="form-control" style="width: 400px" type="text" value="<?php echo $objResult['teacherPhone'] ?>" name="teacherPhone"><br>
- <label for="ex3">ห้อง</label>
- <input class="form-control" style="width: 400px" type="text" value="<?php echo $objResult['classID'] ?>" name="classID"><font color="#CC0000"><b>(* กรุณาใส่เป็นรหัสห้อง เช่น 1/1 คือ 101 เป็นต้น)</b></font><br><br>
+ <label for="ex3">ประจำชั้น</label>
+ <input class="form-control" style="width: 400px" type="text" value="<?php echo $objResult['classID'] ?>" name="classID"><font color="#CC0000"><b>(* กรุณาใส่เป็นรหัสห้อง เช่น 1/1 คือ 101 เป็นต้น <br> 999 คือ ผู้บริหาร และ 0 หรือ ผู้ดูแลระบบ)</b></font><br><br>
  <label for="ex3">ชื่อผู้ใช้งาน</label>
  <input class="form-control" style="width: 400px" type="text" value="<?php echo $objResult['user'] ?>" name="user"><br>
  <input class="form-control" style="width: 400px" type="hidden" value="<?php echo $objResult['userID'] ?>" name="userID">
