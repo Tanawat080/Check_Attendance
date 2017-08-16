@@ -49,12 +49,18 @@ if (!$_SESSION["uname"]){  //check session
         </td>
 			</table>
 	</div> <!-- จบล็อคเอ้าท์ -->
+
 <br><br>
 <center>
 	<!-- <img src="images/ksp1.png"> -->
 	<h2> KSP Checking </h2>
 	<h3>ผู้ดูแลระบบ</h3>
 	<hr><br>
+	<div align="right">
+		<a href="addstudents_form.php"><button type="button" class="btn btn-danger"><font color="#000000">จัดการข้อมูลนักเรียน</font></button></a> &nbsp;&nbsp;
+
+		<a href="teacherInfo.php"><button type="button" class="btn btn-danger"><font color="#000000">จัดการข้อมูลอาจารย์</font></button></a> &nbsp;&nbsp;
+	</div>
 		<div class="im">
 			<a href="#"><img src="images/image001.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
 			<a href="#"><img src="images/image002.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
