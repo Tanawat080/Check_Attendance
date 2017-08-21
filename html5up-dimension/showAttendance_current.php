@@ -78,6 +78,8 @@ if (!$_SESSION["uname"]){  //check session
 		$strSQLclass = mysqli_query($mysqli,"SELECT * FROM class WHERE class='".$_GET['class']."'");
 		$objResultclass = mysqli_fetch_array($strSQLclass);
 
+
+
 		$strSQL2 = "SELECT * FROM checkattendance,student,typeattendance where student.studentID=checkattendance.studentID
 		and typeattendance.typeAttendanceID=checkattendance.typeAttendanceID
 		and classID = '".$objResultclass['classID']."'
@@ -86,6 +88,9 @@ if (!$_SESSION["uname"]){  //check session
 		and attendanceDate='".date("Y-m-d")."'";
 
 		//echo $strSQL2;
+		$rowNote = mysqli_query($mysqli,$strSQL2);
+		$note=mysqli_fetch_array($rowNote);
+
 
 
 		$result = mysqli_query($mysqli,$strSQL2);  //เรียกข้อมูลมาแสดงทั้งหมด
@@ -107,6 +112,13 @@ if (!$_SESSION["uname"]){  //check session
 
 		?>
 
+	</table>
+	<table class="table table-hover" width="800" border="1" align="center" bordercolor="#666666">
+		<tr class='active'>
+			<td>
+		<center>หมายเหตุ : <?php echo $note['attendanceNote']; ?></center>
+			</td>
+		</tr>
 	</table></div><br><center>
 		<a href="teacherpage.php"><button type="button" class="btn btn-success"><font color="#000000">เสร็จสิ้น</font></button></a>	&nbsp;
 		<a ><button type="button" onclick="javascript:window.print()" class="btn btn-warning"><font color="#000000">พิมพ์</font></button></a>	&nbsp;

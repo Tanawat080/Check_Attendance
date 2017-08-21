@@ -70,7 +70,7 @@ $result = mysqli_query($mysqli, $strSLQ2);  //เรียกข้อมูล�
 while($row = mysqli_fetch_array($result))
 {
 echo "<tr class='active'>";
-echo "<td align='center'><a href='showAttendance_current.php?subjectID=".$row["subjectID"]."&class=".$row['class']."'><font color='#CC0000'>" . $row["subjectID"] . "</font></a></font></td>";
+echo "<td align='center'><a href='showAttendancemonthly.php?subjectID=".$row["subjectID"]."&class=".$row['class']."'><font color='#CC0000'>" . $row["subjectID"] . "</font></a></font></td>";
 echo "<td align='center'><font color='#003366'>" . $row["subject"] ."&nbsp" .$row['class']. "</font></td>";
 echo "<td align='center'><font color='#CC0000'>" . $row["update"] . "</font></td>";
 echo "</tr>";

@@ -12,6 +12,24 @@ if (!$_SESSION["uname"]){  //check session
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- <script language="JavaScript">
+			function fncSubmit()
+			{
+				var Rows = document.frmMain.hdLine.value;
+				for(x=1;x<=Rows;x++)
+				{
+					var op1 = document.getElementById("typeAttendance_"+x);
+					if(op1.checked == false)
+					{
+						alert('กรุณากรอกข้อมูลลำดับที่ ' + x);
+						return false;
+					}
+				}
+
+			}
+		</script> -->
+
 	</head>
 	<style>
 	div.abcd{
@@ -51,7 +69,7 @@ if (!$_SESSION["uname"]){  //check session
 	<a href="addstudents.php?subjectID=<?php echo $_GET['subjectID']."&class=".$_GET['class'];?>"><button type="button" class="btn btn-danger"><font color="#000000">เพิ่มชื่อนักเรียน</font></button></a> &nbsp;&nbsp;
 </div>
 <br>
-<form method="post" action="confirmcheckattendance.php?subjectID=<?php echo $_GET['subjectID']."&class=".$_GET['class'];?>" >
+<form name="frmMain" method="post" OnSubmit="return fncSubmit();" action="confirmcheckattendance.php?subjectID=<?php echo $_GET['subjectID']."&class=".$_GET['class'];?>" >
 <center><h3>รายวิชาที่สอน</h3>
 <h4>รหัสวิชา <?php echo $_GET['subjectID']; echo "  -    ห้อง  "; echo $_GET['class'];  ?></h4>
 </center>
@@ -86,10 +104,10 @@ echo "<td align='center'>" .$row['studentID']. "</td>"; ?>
 <?php
 echo "<td align='left'>" .$row['studentName']."&nbsp&nbsp".$row['studentLastname']. "</td>";
 echo "<td align='center'>" .$row['class']. "</td>";
-echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' value='10001'></td>";
-echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' value='10002'></td>";
-echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' value='10003'></td>";
-echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' value='10004'></td>";
+echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' id='typeAttendance_".$i."' value='10001'></td>";
+echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' id='typeAttendance_".$i."' value='10002'></td>";
+echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' id='typeAttendance_".$i."' value='10003'></td>";
+echo "<td align='center'><input type='radio' name='typeAttendance_".$i."' id='typeAttendance_".$i."' value='10004'></td>";
 echo "</tr>";
 echo "<input type='hidden' name='a' value='".$i."'>";
 $i=$i+1;
@@ -97,13 +115,20 @@ $i=$i+1;
 
 ?>
 
-</table><br>
+</table>
+<table class="table table-hover" width="800" border="1" align="center" bordercolor="#666666">
+	<tr class='active'>
+		<td>
+	<center>หมายเหตุ : </center>
+		</td>
+	</tr>
+</table>
 <input class="form-control"  type="hidden" name="hdLine" value="<?php echo $i-1; ?>">
 <div class="container"align="center">
-  <label >หมายเหตุ:</label>
+
  <textarea class="form-control" rows="5" name="note" style="width: 600px"></textarea>
 	<br>
-	<button type="submit" class="btn btn-success"><font color="#000000">บันทึก</font></button>
+	<button type="submit" name="Submit" class="btn btn-success"><font color="#000000">บันทึก</font></button>
 	<a href="checkattendance.php"><button type="button" class="btn btn-danger"><font color="#000000">ยกเลิก</font></button></a>
 </div>
 

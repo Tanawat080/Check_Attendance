@@ -44,21 +44,18 @@ if (!$_SESSION["uname"]){  //check session
         </td>
         </table>
 				<br><hr>
-
 		</div> <!-- จบล็อคเอ้าท์ -->
-
-<div align="right">
-	<a href="teacherpage.php"><button type="button" class="btn btn-primary"><font color="#000000">หน้าหลัก</font></button></a>	&nbsp;
-
-</div>
-    </div> <!-- จบล็อคเอ้าท์ -->
+	<div align="right">
+		<a href="teacherpage.php"><button type="button" class="btn btn-primary"><font color="#000000">หน้าหลัก</font></button></a>&nbsp;
+	</div>
+</div> <!-- จบล็อคเอ้าท์ -->
 <br><br>
 <form method="post" action="#" enctype="multipart/form-data">
-
-รายงานประจำวัน
-
+<a href="viewReport.php">รายงานการเข้าเรียนวันนี้</a><br>
+<a href="dailyReport.php">รายงานการเข้าเรียนรายวัน</a><br>
+<a href="monthlyReport.php">รายงานการเข้าเรียนรายเดือน</a><br>
+<a href="">รายงานการเข้าเรียนทั้งหมด</a>
 </form>
-
 	</body>
 
 </html>

@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Bootstrap Case</title>
+
   <meta charset="utf-8">
   <link href="h.css" rel="stylesheet" >
   <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">

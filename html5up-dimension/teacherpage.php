@@ -50,7 +50,7 @@ if (!$_SESSION["uname"]){  //check session
 		<h3>อาจารย์ที่ปรึกษา</h3>
 		<hr><br>
 		<div class="im">
-		<a href="#" ><img src="images/image001.png" width="200" height="75"  ></a>	&nbsp;&nbsp;&nbsp;
+		<a href="" ><img src="images/image001.png" width="200" height="75"  ></a>	&nbsp;&nbsp;&nbsp;
 		<a href="#"><img src="images/image002.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
 		<a href="#"><img src="images/image003.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
 		<a href="#"><img src="images/image004.png" width="200" height="75" ></a>	<br><br><br>
@@ -59,7 +59,7 @@ if (!$_SESSION["uname"]){  //check session
 		<a href="#"><img src="images/image007.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
 		<a href="#"><img src="images/image008.png" width="200" height="75" ></a>	<br><br><br>
 		<a href="checkattendance.php"><img src="images/image009.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
-		<a href="viewReport.php"><img src="images/image010.png" width="200" height="75" ></a>
+		<a href="allReport.php"><img src="images/image010.png" width="200" height="75" ></a>
 </div>
 </div>
 	</body>
