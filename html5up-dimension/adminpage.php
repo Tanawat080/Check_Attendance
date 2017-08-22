@@ -58,8 +58,8 @@ if (!$_SESSION["uname"]){  //check session
 	<div align="right">
 	</div>
 		<div class="im">
-			<a href="#"><img src="images/image001.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
-			<a href="#"><img src="images/image002.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
+			<a href="checkin.php"><img src="images/image001.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
+			<a href="notCheckout.php"><img src="images/image002.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
 			<a href="#"><img src="images/image003.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
 			<a href="#"><img src="images/image004.png" width="200" height="75" ></a>	<br><br><br>
 			<a href="#"><img src="images/image005.png" width="200" height="75" ></a>	&nbsp;&nbsp;&nbsp;
